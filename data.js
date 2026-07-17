@@ -201,6 +201,7 @@ const RIDES = [
       { name: "Mirador de la Victoria", cat: "4", length: "1.32 km", grade: "8%",  kom: "03:50", qom: "05:44", strava: "https://www.strava.com/segments/24955066" },
       { name: "Puig Maria",             cat: "4", length: "1.38 km", grade: "10%", kom: "06:07", qom: "07:39", strava: "https://www.strava.com/segments/3774388" }
     ],
+    segmentNote: "“Sa Creueta” in the official segment table is the same climb the camp spreadsheet lists as Sa Crueta (cat 3) — the Formentor viewpoint road.",
     profileImg: "assets/profile-5.png",
     mapImg: "assets/map-5.jpg",
     profileImgOfficial: "https://www.sacalobra.cc/img/live-event/routes/mallorca/formentor.png",

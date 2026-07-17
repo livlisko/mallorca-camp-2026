@@ -239,7 +239,7 @@
         </div>
         <div class="chart-card">
           <div class="chart-scroll">${weekChartSvg()}</div>
-          <p class="chart-footnote">Queen Stage (Tue) and Sa Calobra (Thu) carry over half of the week’s ${e.v} ${e.u} of climbing. Bars show elevation gain; distance is under each day.</p>
+          <p class="chart-footnote">Queen Stage (Tue) and Sa Calobra (Thu) carry almost half of the week’s ${e.v} ${e.u} of climbing. Bars show elevation gain; distance is under each day.</p>
         </div>
       </section>
 
@@ -379,6 +379,8 @@
 
   /* ---------- router ---------- */
   function render(force) {
+    tooltip.classList.remove("show");
+    tooltip.setAttribute("aria-hidden", "true");
     const m = location.hash.match(/^#\/stage\/(\d+)/);
     if (m) {
       renderStage(+m[1]);
