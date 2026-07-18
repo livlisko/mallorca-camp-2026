@@ -5,19 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mallorca 2026 · Sa Calobra Camp Guide</title>
   <meta name="description" content="Personal ride guide for the Sa Calobra CC Mallorca cycling camp, October 17–24 2026.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 26 L10 10 L15 19 L20 6 L30 26 Z' fill='%23e8794e'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23ef6b4e'/%3E%3Cpath d='M3 20 Q10 12 16 17 T29 15 L29 29 L3 29 Z' fill='%231b7fa8'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
+
+  <!-- fixed sunset-to-sea backdrop with fluid blobs -->
+  <div class="backdrop" aria-hidden="true">
+    <svg class="blobs" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="gSea" cx="35%" cy="35%" r="80%">
+          <stop offset="0%" stop-color="#59d3cd"/>
+          <stop offset="55%" stop-color="#2496b4"/>
+          <stop offset="100%" stop-color="#155e8b"/>
+        </radialGradient>
+        <radialGradient id="gCoral" cx="40%" cy="30%" r="85%">
+          <stop offset="0%" stop-color="#f9b273"/>
+          <stop offset="55%" stop-color="#ee7a55"/>
+          <stop offset="100%" stop-color="#d95743"/>
+        </radialGradient>
+        <radialGradient id="gDeep" cx="50%" cy="40%" r="80%">
+          <stop offset="0%" stop-color="#2c5b86"/>
+          <stop offset="100%" stop-color="#132c4c"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#gDeep)" opacity=".55" d="M-80 640 C60 480 320 520 430 640 C540 760 400 900 180 910 C-40 920 -220 800 -80 640 Z"/>
+      <path fill="url(#gSea)" opacity=".92" d="M760 40 C1000 -60 1320 60 1400 260 C1480 460 1300 600 1080 570 C860 540 900 420 780 340 C660 260 520 140 760 40 Z"/>
+      <path fill="url(#gCoral)" opacity=".95" d="M420 240 C560 120 840 180 950 320 C1060 460 1010 640 830 700 C650 760 470 700 380 560 C290 420 280 360 420 240 Z"/>
+      <path fill="url(#gSea)" opacity=".65" d="M1040 560 C1180 500 1360 560 1420 680 C1480 800 1380 920 1200 930 C1020 940 900 620 1040 560 Z"/>
+    </svg>
+    <div class="dotrow d1"></div>
+    <div class="dotrow d2"></div>
+  </div>
+
+  <!-- vertical stage rail -->
+  <nav class="rail" aria-label="Stages">
+    <a href="#/stage/1"><i></i>Sa Batalla</a>
+    <a href="#/stage/2"><i></i>Randa &amp; Felanitx</a>
+    <a href="#/stage/3"><i></i>Queen Stage</a>
+    <a href="#/stage/4"><i></i>Caffeine Ride</a>
+    <a href="#/stage/6"><i></i>Sa Calobra</a>
+    <a href="#/stage/5"><i></i>Formentor</a>
+  </nav>
+
   <header class="topbar">
-    <a href="#/" class="brand">
-      <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M2 26 L10 10 L15 19 L20 6 L30 26 Z" fill="var(--accent)"/></svg>
-      <span><strong>MALLORCA&nbsp;2026</strong><em>Sa Calobra CC</em></span>
-    </a>
-    <div class="topbar-right">
+    <a href="#/" class="brand">SCCC<span>/ mallorca camp</span></a>
+    <nav class="topnav">
+      <a href="#/">Week</a>
+      <a href="#rides">Rides</a>
+      <a href="https://www.sacalobra.cc/cycling-camp/138/" target="_blank" rel="noopener">Official&nbsp;↗</a>
       <button id="unitToggle" class="unit-toggle" type="button" aria-label="Switch units">km</button>
-      <a class="topbar-link" href="https://www.sacalobra.cc/cycling-camp/138/" target="_blank" rel="noopener">Official camp ↗</a>
-    </div>
+    </nav>
   </header>
 
   <main id="app" tabindex="-1"><!-- rendered by app.js --></main>
@@ -25,12 +63,12 @@
   <div id="tooltip" class="chart-tooltip" role="status" aria-hidden="true"></div>
 
   <footer class="site-footer">
-    <p><strong>Sources.</strong> Hard stats from the camp spreadsheet <em>“Mallorca camp oct 16–24 2026 (Sa Calobra).xlsx”</em>; stage descriptions, segment tables, profiles &amp; maps from the official
-    <a href="https://www.sacalobra.cc/cycling-camp/138/" target="_blank" rel="noopener">sacalobra.cc</a> stage pages linked in the workbook.</p>
-    <p class="footer-note">Personal camp guide · not affiliated with Sa Calobra Cycling Club · route images © sacalobra.cc</p>
+    <p>Hard stats from the camp spreadsheet · stage descriptions, segments &amp; route images from
+    <a href="https://www.sacalobra.cc/cycling-camp/138/" target="_blank" rel="noopener">sacalobra.cc</a> ·
+    personal guide, not affiliated with Sa Calobra CC</p>
   </footer>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="data.js?v=5"></script>
+  <script src="app.js?v=5"></script>
 </body>
 </html>
